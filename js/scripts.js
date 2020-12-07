@@ -35,13 +35,10 @@ document.write('Сумма чисел от 0 до 100: ' + sum);
 document.write('\n\n---- 4 задание ----');
 
 for (i = 1; i <= 5; i++) {
-
     sum = 0;
-
     for (j = 1; j <= i; j++) {
         sum += j;
     }
-
     document.write('<br>' + 'Сумма чисел ' + i + ': ' + sum);
 }
 
@@ -95,7 +92,7 @@ let str;
 sum = 0;
 
 for (i = 1; ; i++) {
-    str = prompt('Введите число:');
+    str = prompt('8 задание. Введите число:');
     sum += Number(str);
     if (str == 0 || str == null) {
         break;
@@ -112,5 +109,42 @@ if (!isNaN(str)) {
 
 console.log('---- 9 задание ----');
 
-let s = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57';
+let s = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57',
+    arr = s.split(' '),
+    max = arr[0], 
+    min = arr[0];
 
+console.log(arr);
+
+for (i = 0; i <= arr.length; i++) {
+    if (arr[i] > max) {
+        max = arr[i];   
+    } else if (arr[i] < min) {
+        min = arr[i];   
+    }
+}
+console.log('Максимальное число: ' + max);
+console.log('Минимальное число: ' + min);
+
+
+//---- 10 задание ----
+
+let p = '';
+
+n = prompt('10 задание. Введите число:');
+
+sum = 0;
+
+if (isFinite(n)) {
+    alert(n.split(''));
+    alert('Количество цифр: ' + n.length);
+    while (n > 0) { 
+        sum += n % 10;  
+        p += n % 10;
+        n = Math.floor(n / 10);
+    }
+    alert('Сумма цифр: ' + sum);
+    alert('Обратный порядок цифр: ' + p);
+} else {
+    alert('Ошибка, введите число.');
+}
