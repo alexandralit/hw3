@@ -36,7 +36,7 @@ document.write('\n\n---- 4 задание ----');
 
 for (i = 1; i <= 5; i++) {
     sum = 0;
-    for (j = 1; j <= i; j++) {
+    for (let j = 1; j <= i; j++) {
         sum += j;
     }
     document.write('<br>' + 'Сумма чисел ' + i + ': ' + sum);
@@ -46,6 +46,7 @@ for (i = 1; i <= 5; i++) {
 document.write('\n\n---- 5 задание ---- \n');
 
 document.write('Чётные числа от 8 до 56: \n');
+
 document.write('for\n');
 
 for (i = 8; i <= 56; i++) {
@@ -66,7 +67,7 @@ document.write('\n\n---- 6 задание ---- \n');
 
 for (i = 2; i <= 10; i++) {
     for (j = 1; j <= 10; j++) {
-        document.write(i + ' * ' + j + ' = ' + i * j + '<br>');
+        document.write(i + '*' + j + ' = ' + i * j + '<br>');
     }
 }
 
@@ -101,6 +102,7 @@ for (i = 1; ; i++) {
         break;
     }
 }
+
 if (!isNaN(str)) {
     alert('Сумма введённых чисел ' + sum);
     alert('Среднее арифметическое введённых чисел ' + sum / (i - 1));
@@ -123,8 +125,9 @@ for (i = 0; i <= arr.length; i++) {
         min = arr[i];   
     }
 }
-console.log('Максимальное число: ' + max);
-console.log('Минимальное число: ' + min);
+
+console.log('Максимальное значение: ' + max);
+console.log('Минимальное значение: ' + min);
 
 
 //---- 10 задание ----
